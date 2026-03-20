@@ -24,9 +24,14 @@
 #         result += test2[y]
 
 
-a = 1
-b = 2
+# a = 1
+# b = 2
 
-b, a = a, b
+# b, a = a, b
 
-print (a, b)
+# print (a, b)
+
+a = " "*2;
+print (a)
+a+= "t"
+print (a)
