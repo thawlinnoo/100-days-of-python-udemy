@@ -31,7 +31,7 @@
 
 # print (a, b)
 
-a = " "*2;
-print (a)
-a+= "t"
-print (a)
+# a = " "*2;
+# print (a)
+# a+= "t"
+# print (a)

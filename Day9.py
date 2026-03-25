@@ -65,5 +65,5 @@ while wanna_continue:
         print(f"{winner} won the bid with {highest}")
         wanna_continue = False
     
-
-
+#  i can use this to find the max as well
+# highest = max(memory, key=memory.get)
