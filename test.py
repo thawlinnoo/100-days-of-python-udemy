@@ -35,3 +35,8 @@
 # print (a)
 # a+= "t"
 # print (a)
+
+a = [1,2,3,4,4]
+
+a = []
+print (a)
