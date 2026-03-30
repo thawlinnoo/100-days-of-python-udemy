@@ -41,4 +41,15 @@
 # a = []
 # print (a)
 
+a = 1
+b = 2
+c = 3
+d = 5
+if a<d:
+    print("a")
+if b<d:
+    print("b")
+if c<d:
+    print("c")
 
+print("true")
