@@ -47,7 +47,7 @@
                     
 # game()
 
-
+#cleaner version
 
 import random
 from art import logo4, vs
