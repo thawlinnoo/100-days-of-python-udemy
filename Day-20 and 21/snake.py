@@ -20,6 +20,16 @@ class Snake:
             x -= 20
             self.all_block.append(new_block)
 
+    def extend(self):
+        new_block = Turtle("square")
+        new_block.penup()
+        new_block.color("white")
+        last_block_x_cor = self.all_block[-1].xcor()
+        last_block_y_cor = self.all_block[-1].ycor()
+        new_block.goto(last_block_x_cor, last_block_y_cor)
+        self.all_block.append(new_block)
+        
+
     def move(self):
     
         for blocks in range(len(self.all_block)-1, 0, -1):  
@@ -41,6 +51,8 @@ class Snake:
             self.all_block[0].setheading(180)
 
     def right(self):
-        if self.all_block[0].heading() != 1800:
+        if self.all_block[0].heading() != 180:
             self.all_block[0].setheading(0)
+
+    
 
