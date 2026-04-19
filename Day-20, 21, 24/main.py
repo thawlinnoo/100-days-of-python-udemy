@@ -43,15 +43,18 @@ while game_on:
 
     #Detect collision with wall
     if snake.all_block[0].xcor() > 290 or snake.all_block[0].xcor() < -290 or snake.all_block[0].ycor() >290 or snake.all_block[0].ycor() < -290:
-        game_on = False
-        score_board.game_over()
+        score_board.reset_high_score()
+        snake.reset_snake()
+
+        
         
 
     #Detect collision with tail(any block from body)
     for blocks in snake.all_block[1:]:       # (slicing, so it will only check starting from index 1 to the end.. skip the head block)
         if snake.all_block[0].distance(blocks) < 10:
-            game_on = False
-            score_board.game_over()
+            score_board.reset_high_score()
+            snake.reset_snake()
+ 
 
 
     

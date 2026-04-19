@@ -20,6 +20,12 @@ class Snake:
             x -= 20
             self.all_block.append(new_block)
 
+    def reset_snake(self):
+        for blocks in self.all_block:
+            blocks.goto(1000, 1000)
+        self.all_block.clear()
+        self.create_snake()
+
     def extend(self):
         new_block = Turtle("square")
         new_block.penup()
