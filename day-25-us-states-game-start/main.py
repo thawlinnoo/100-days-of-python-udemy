@@ -28,7 +28,7 @@ score = 0
 
 
 while len(corrected_guesses) < 50:
-    screen.update()
+    screen.update() 
     time.sleep(0.1)
     answer = screen.textinput(title= "Guess the state", prompt= " What's another state's name?: ")
     
@@ -40,7 +40,7 @@ while len(corrected_guesses) < 50:
    
     
 
-    if (data.state == format_answer).any():
+    if (data.state == format_answer).any() and format_answer not in corrected_guesses:
 
         corrected_guesses.append(format_answer)
         score += 1
@@ -50,13 +50,14 @@ while len(corrected_guesses) < 50:
 
         on_map_letter.goto(x_cor, y_cor)
         on_map_letter.write(format_answer, font=("Arial", 12, "bold"), align="center")
-
+        
+        score_board.clear()
         score_board.write(f"Current score: {score}", font=("Arial", 15, "bold"), align="center")
+   
+        
 
-missing_states = []
-for states in all_states:
-    if states not in corrected_guesses:
-        missing_states.append(states)
+missing_states = [states for states in all_states if states not in corrected_guesses]
+
 
 data_dict = {
     "Missing States" : missing_states
