@@ -7,11 +7,10 @@ window.config(padx=75, pady=80)
 
 def convert():
     miles = my_entry.get()
-    km = round(int(miles) * 1.60934, 2)
+    km = round(float(miles) * 1.60934, 2)
     answer_label.config(text=km)
 
-label_1 = Label(text="", font=("Arial", 24, "bold"))
-label_1.grid(column=0, row=0)
+
 
 label_2 = Label(text="is equal to", font=("Arial", 24, "bold"))
 label_2.grid(column=0, row=1)
