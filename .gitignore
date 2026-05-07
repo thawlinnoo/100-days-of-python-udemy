@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 .vscode/
 .env
+flight_cache.sqlite
+output.json

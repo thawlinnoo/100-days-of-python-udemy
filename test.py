@@ -41,15 +41,23 @@
 # a = []
 # print (a)
 
-a = 1
-b = 2
-c = 3
-d = 5
-if a<d:
-    print("a")
-if b<d:
-    print("b")
-if c<d:
-    print("c")
+# a = 1
+# b = 2
+# c = 3
+# d = 5
+# if a<d:
+#     print("a")
+# if b<d:
+#     print("b")
+# if c<d:
+#     print("c")
 
-print("true")
+# print("true")
+
+
+# from datetime import datetime, timedelta
+
+# today = datetime.now()
+# tomorrow = today.date() + timedelta(days=30)
+
+# print(tomorrow)
