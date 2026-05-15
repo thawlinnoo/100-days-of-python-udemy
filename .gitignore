@@ -5,3 +5,4 @@ __pycache__/
 .env
 flight_cache.sqlite
 output.json
+browser.json
