@@ -28,7 +28,7 @@ while run:
     price_whole = soup.find(name="span", class_="a-price-whole").get_text()
     price_fraction = soup.find(name="span", class_="a-price-fraction").get_text()
     price = (f"{price_whole}{price_fraction}")
-    price_into_float = float(price)
+    price_into_float = float(price.replace(",", ""))
     print(price_into_float)
     if price_into_float < 100:
         with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
