@@ -18,16 +18,17 @@
 
 ##decorator function
 import time
-current_time = time.time()
-print(current_time) # seconds since Jan 1st, 1970 
+# current_time = time.time()
+# print(current_time) # seconds since Jan 1st, 1970 
 
 
 
 def speed_calc_decorator(function):
     def execute_time_check():
+        current_time = time.time()
         function()
         after_run_time = time.time()
-        print(f"{function} run speed: {after_run_time-current_time}")
+        print(f"{function.__name__} run speed: {after_run_time-current_time}")
     return execute_time_check
       
 @speed_calc_decorator
@@ -44,7 +45,5 @@ def slow_function():
         i * i
         
         
-result = speed_calc_decorator(fast_function)
-result()
-result = speed_calc_decorator(slow_function)
-result()
+fast_function()
+slow_function()
