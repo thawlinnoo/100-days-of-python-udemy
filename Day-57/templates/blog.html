@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+  </head>
+  <body>
+    {% for blog in post: %} {% if blog["id"]==2 %}
+    <h1>{{ blog["title"] }}</h1>
+    <h2>{{ blog["subtitle"] }}</h2>
+    {% endif %} {% endfor %}
+  </body>
+  <footer>
+    <p>Copyright 2026. Built by Thaw Linn Oo</p>
+  </footer>
+</html>
